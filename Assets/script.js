@@ -2,8 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var textArea = "";
-var x = document.querySelector("#hour-9")
-renderLocal();
+var x = document.querySelector("#hour-9");
 var currentTime = dayjs().hour();
 
 saveButton.addEventListener('click', function(event) {
@@ -17,8 +16,7 @@ $(document).ready(function () {
   })
 
 
-  var hourBlock = parseInt($(this).parent().attr('id').replace('hour-', ''));
-
+  
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
@@ -28,12 +26,13 @@ $(document).ready(function () {
   
   
   // TODO: Add code to apply the past, present, or future class to each time
-
+  
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
+  var hourBlock = parseInt($(this).parent().attr('id').replace('hour-', ''));
 if (hourBlock < currentTime){
     $(this).parent().addClass('past')
 } else if(hourBlock === currentTime) {
@@ -52,3 +51,8 @@ if (hourBlock < currentTime){
   var currDate = $('#currentDay');
         currDate.text(new Date());
 });
+$(saveButton).click(function() {
+  var textInput = $(this).siblings(".description").val();
+  var time = $(this).parent().attr('id').split('-')[1];
+  localStorage.setItem(textInput, time);
+})
