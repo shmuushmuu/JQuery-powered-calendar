@@ -4,6 +4,10 @@
 var currDate = $('#currentDay');
       currDate.text(new Date());
 
+var textArea = "";
+var x = document.querySelector("#hour-9")
+renderLocal();
+
 saveButton.addEventListener('click', function(event) {
   event.preventDefault();
 } )
