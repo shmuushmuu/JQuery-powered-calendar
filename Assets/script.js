@@ -16,6 +16,9 @@ $(document).ready(function () {
 
   })
 
+
+  var hourBlock = parseInt($(this).parent().attr('id').replace('hour-', ''));
+
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
@@ -31,7 +34,13 @@ $(document).ready(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
-
+if (hourBlock < currentTime){
+    $(this).parent().addClass('past')
+} else if(hourBlock === currentTime) {
+    $(this).parent().addClass('present')
+} else {
+    $(this).addClass('future');
+}
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   
