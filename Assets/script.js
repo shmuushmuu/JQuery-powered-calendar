@@ -3,6 +3,11 @@
 // in the html.
 var currDate = $('#currentDay');
       currDate.text(new Date());
+
+saveButton.addEventListener('click', function(event) {
+  event.preventDefault();
+}    
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
