@@ -5,7 +5,6 @@ $(function dynamicPage() {
   
 $('.description').each(function(){
 
-  
   var hourBlock = parseInt($(this).parent().attr('id').replace('hour-', ''));
   if (hourBlock < currentTime){
     $(this).parent().addClass('past')
@@ -21,7 +20,8 @@ $('.description').each(function(){
 
 $(saveButton).click(function() {
   var textInput = $(this).siblings('.description').val();
-  var time = $(this).parent().attr('id').split('-')[1];
+  var time = $(this).parent().attr('id');
   localStorage.setItem(textInput, time);
-})
+  localStorage.getItem(textInput);
+  })
 })
