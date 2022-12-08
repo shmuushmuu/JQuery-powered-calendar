@@ -1,9 +1,7 @@
-var textArea = "";
-var x = document.querySelector("#hour-9");
-var currentTime = dayjs().hour();
-
-$(document).ready(function () {
-
+$(function dynamicPage() {
+  var currentTime = dayjs().hour();
+  var saveButton = $('.saveBtn');
+  
   var hourBlock = parseInt($(this).parent().attr('id').replace('hour-', ''));
     if (hourBlock < currentTime){
     $(this).parent().addClass('past')
@@ -18,7 +16,7 @@ $(document).ready(function () {
 });
 
 $(saveButton).click(function() {
-  var textInput = $(this).siblings(".description").val();
+  var textInput = $(this).siblings('.description').val();
   var time = $(this).parent().attr('id').split('-')[1];
   localStorage.setItem(textInput, time);
 })
