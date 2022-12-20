@@ -1,10 +1,10 @@
 # JQuery-powered-calendar
-[Here's the quiz!] (https://shmuushmuu.github.io/JQuery-powered-calculator/)
+[Here's the quiz!](https://shmuushmuu.github.io/JQuery-powered-calculator/)
 
 
 ## Table of Contents
-- [Description] (#description-of-project)
-- [Visuals] (#visuals)
+- [Description](#description-of-project)
+- [Visuals](#visuals)
 
 ## Description of Project
 The project was to make a day-planner that would interact with real-time, save a to-do list to local storage, and repopulate the text areas upon refresh.
@@ -15,4 +15,4 @@ I was able to wrap all of my JS in one function, which kept the page dynamic. It
 ## Visuals
 The day-planner should look like this:
 
-![Screenshot] (assets/images/scheduler-screenshot.png)
+![Screenshot](assets/images/scheduler-screenshot.png)
